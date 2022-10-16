@@ -1,0 +1,77 @@
+/* 
+utility classes
+*/
+.txtAlignEnd {
+  text-align: end !important;
+}
+.txtAlignCenter {
+  text-align: center !important;
+}
+/* 
+utility classes
+*/
+.Log_in_container {
+  background-image: url(".././../assets/Images/Rectangle\ 7227.png") !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-position: top !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  /* object-fit: contain !important; */
+}
+.form_container {
+  border: 1px solid red !important;
+}
+
+/* form Card */
+.form_card {
+  background: #ffffff !important;
+  max-width: 45rem !important;
+  position: absolute !important;
+  top: 15% !important;
+  left: 8% !important;
+  border-radius: 15px !important;
+  box-shadow: 14px 14px 40px rgba(0, 0, 0, 0.15) !important;
+  padding: 2rem !important;
+}
+.form_heading {
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 3.3rem !important;
+  line-height: 182.6% !important;
+  color: #347d00 !important;
+}
+.form_Typography {
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 1.8rem !important;
+  color: #4d4d4d !important;
+}
+.form_input {
+  background: #f7f8fd !important;
+  border: 1px solid #dddddd !important;
+  border-radius: 0.8rem !important;
+  height: 4.8rem !important;
+  font-size: 1.5rem !important;
+}
+.form_subheading {
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 1.4rem !important;
+  line-height: 182.6% !important;
+  color: #878787 !important;
+}
+.log_in_btn {
+  background: #347d00 !important;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 0.8rem !important;
+  width: 100% !important;
+  color: #ffffff !important;
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+}
+.sign_up {
+  color: #347d00 !important;
+  font-weight: 600 !important;
+}
+/* form Card */
