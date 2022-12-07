@@ -9,14 +9,20 @@ const NewPage = () => {
   ];
   const [val, setVal] = useState([]);
   const saveValHandler = (a, i) => {
-    console.log(a,'i am a')
-    const arr = [...val];
-    let index = arr.findIndex((x) => x.id === a.id);
-    if (index === -1) {
+    console.log(a, "i am a");
+    let arr = [...val];
+    let index = arr.find((x) => x.id === a.id);
+    console.log(index, "indexindex");
+    if (arr.length > 0) {
+      if (index) {
+        arr = arr.filter((x) => x.id != index.id);
+      } else {
         arr.push(a);
+      }
     } else {
-        arr.splice(index, 1);
+      arr.push(a);
     }
+
     setVal(arr);
   };
   console.log(val, "123Kittu");
