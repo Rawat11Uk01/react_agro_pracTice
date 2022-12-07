@@ -1,40 +1,37 @@
-import React from "react";
-import { useState } from "react";
-import AddDevice from "./AddDevice";
+import React, { useState } from "react";
+
 const NewPage = () => {
-  //   const dummyData = [{ firstName: "", lastName: "" }];
-  const [input1, setUserInput1] = useState("");
-  const [layer, setLayer] = useState([]);
-
-  const chaneHandler1 = (data) => {
-    const dataNew = [...data]
-    setUserInput1(dataNew);
+  const fakeArr = [
+    { id: 1, name: "a" },
+    { id: 2, name: "b" },
+    { id: 3, name: "c" },
+    { id: 4, name: "4" },
+  ];
+  const [val, setVal] = useState([]);
+  const saveValHandler = (a, i) => {
+    console.log(a,'i am a')
+    const arr = [...val];
+    let index = arr.findIndex((x) => x.id === a.id);
+    if (index === -1) {
+        arr.push(a);
+    } else {
+        arr.splice(index, 1);
+    }
+    setVal(arr);
   };
-
-  const newArr = new Array(layer).fill(1);
-  const selectLayerHandler = (e) => {
-    setLayer(+e.target.value);
-  };
-  console.log(input1, "input1");
+  console.log(val, "123Kittu");
   return (
-    <>
-      <div style={{ border: "1px solid red", padding: "20px 0 0 50px" }}>
-        <label style={{ display: "block" }}>Layers</label>
-        <select onChange={(e) => selectLayerHandler(e)}>
-          <option value={1}>1</option>
-          <option value={2}>2</option>
-          <option value={3}>3</option>
-          <option value={4}>4</option>
-          <option value={5}>5</option>
-          <option value={6}>6</option>
-          <option value={7}>7</option>
-          <option value={8}>8</option>
-        </select>
-      </div>
-      {newArr?.map((a, i) => (
-        <AddDevice key={i} chaneHandler1={chaneHandler1}/>
+    <div>
+      {fakeArr.map((a, i) => (
+        <button
+          key={i}
+          onClick={() => saveValHandler(a, i)}
+          style={{ marginLeft: "20px" }}
+        >
+          {a.name}
+        </button>
       ))}
-    </>
+    </div>
   );
 };
 

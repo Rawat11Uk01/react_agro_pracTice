@@ -1,23 +1,29 @@
-import { Grid, Typography } from "@mui/material";
-import React, { useState } from "react";
-const AddDevice = ({chaneHandler1}) => {
-  const [input, setUserInput] = useState([{ firstName: "", lastName: "" }]);
-  const chaneHandler = (e, i) => {
-    e.preventDefault();
-    const value = e.target.value;
+// import { Grid, Typography } from "@mui/material";
+// import React, { useState } from "react";
+// const AddDevice = (props) => {
+//   const [name, setName] = useState("");
+//   const [lastName, setLastName] = useState("");
 
-    setUserInput((input) => {
-      return { ...input, [e.target.name]: value };
-    });
-    chaneHandler1(input);
-  };
-  return (
-    <>
-      <div>
-        <input type="text" name="firstName" onChange={(e) => chaneHandler(e)} />
-        <input type="text" name="lastname" onChange={(e) => chaneHandler(e)} />
-      </div>
-    </>
-  );
-};
-export default AddDevice;
+//   const formData = {
+//     name: name,
+//     lastName: lastName,
+//   };
+//   props.chaneHandler1(formData);
+//   return (
+//     <>
+//       <div>
+//         <input
+//           type="text"
+//           name="firstName"
+//           onChange={(e) => setName(e.target.value)}
+//         />
+//         <input
+//           type="text"
+//           name="lastname"
+//           onChange={(e) => setLastName(e.target.value)}
+//         />
+//       </div>
+//     </>
+//   );
+// };
+// export default AddDevice;
